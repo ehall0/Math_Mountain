@@ -131,11 +131,119 @@ $(()=> {
           });
      }
     ////////////////////////////
+    //questions/////
+    const question1 =() => {
+        const userInput1 = prompt('Answer the following problem below: \n 9 * 9');
+        if(userInput1 === '81'){
+            user.updateScores;
+            loc1();
+            score(0);
+        }else{
+            question1();
+        }
+    }
+    const question2 =() => {
+        const userInput1 = prompt('Answer the following problem below: \n 20 - 7');
+        if(userInput1 === '13'){
+            user.updateScores;
+            loc2();
+            score(0);
+        }else{
+            question2();
+        }
+    }
+    const question3 =() => {
+        const userInput1 = prompt('Answer the following problem below: \n 35 / 7');
+        if(userInput1 === '5'){
+            user.updateScores;
+            loc3();
+            score(1);
+        }else{
+            question3();
+        }
+    }
+    const question4 =() => {
+        const userInput1 = prompt('Answer the following problem below: \n 99 / 3');
+        if(userInput1 === '33'){
+            user.updateScores;
+            loc4();
+            score(1);
+        }else{
+            question4();
+        }
+    }
+    const question5 =() => {
+        const userInput1 = prompt('Answer the following problem below: \n 20 * 6');
+        if(userInput1 === '120'){
+            user.updateScores;
+            loc5();
+            score(1);
+        }else{
+            question5();
+        }
+    }
+    const question6 =() => {
+        const userInput1 = prompt('Answer the following problem below: \n 30 + 28');
+        if(userInput1 === '58'){
+            user.updateScores;
+            loc6();
+            score(2);
+        }else{
+            question6();
+        }
+    }
+    const question7 =() => {
+        const userInput1 = prompt('Answer the following problem below: \n 40 - 25');
+        if(userInput1 === '15'){
+            user.updateScores;
+            loc7();
+            score(2);
+        }else{
+            question7();
+        }
+    }
+    const question8 =() => {
+        const userInput1 = prompt('Answer the following problem below: \n 90 * 2');
+        if(userInput1 === '180'){
+            user.updateScores;
+            loc8();
+            score(2);
+        }else{
+            question8();
+        }
+    }
+    const question9 =() => {
+        const userInput1 = prompt('Answer the following problem below: \n 72 / 8');
+        if(userInput1 === '9'){
+            user.updateScores;
+            loc9();
+            score(3);
+            alert(`${user.name} reached the top of the mountain first!`);
+        }else{
+            question9();
+        }
+    }
     /////////////////////////////
     //////START GAME FUNCTION/////
     const startGame = () => {
-         score(user.checkpoint);
+         
+        question1();
         
+        question2();
+        
+        question3();
+        
+        question4();
+        
+        question5();
+        
+        question6();
+        
+        question7();
+        
+        question8();
+        
+        question9();
         
     }
     /////INTRO FUNCTION////////
