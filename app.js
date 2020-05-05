@@ -35,18 +35,17 @@ $(()=> {
 
     ////WIN FUNCTION/////
     const winner = () => {
-        if(opponent.checkpoint < 3 && user.checkpoint === 3){
-        alert(`${user.name} has reached the top of the mountain first! ${user.name} wins! `);
+        if(user.checkpoint > opponent.checkpoint){
+            alert(`${user.name} Reahed the top first! You win!`);
         }else{
-        alert(`${user.name} was too slow! ${opponent.name} wins.`)
-        };
-    };
+            alert(`${opponent.name} wins. You lose.`)
+        }
+    }
 
     /////RESTART FUNCTION////
-    const restart = () => {
-        if(user.checkpoint > 0 && user.checkpoint < 3){
-        alert(`You have reached checkpoint: ${user.checkpoint}, you can restart by refreshing the page, or click 'OK' to continue playing.`)
-        };
+    const restart = (value) => {
+        alert(`You have reached checkpoint: ${value}, you can restart by refreshing the page, or click 'OK' to continue playing.`)
+    
     };
 
     /////display score function/////
@@ -135,7 +134,7 @@ $(()=> {
     const question1 =() => {
         const userInput1 = prompt('Answer the following problem below: \n 9 * 9');
         if(userInput1 === '81'){
-            user.updateScores;
+            user.updateScores();
             loc1();
             score(0);
         }else{
@@ -146,7 +145,7 @@ $(()=> {
     const question2 =() => {
         const userInput1 = prompt('Answer the following problem below: \n 20 - 7');
         if(userInput1 === '13'){
-            user.updateScores;
+            user.updateScores();
             loc2();
             score(0);
         }else{
@@ -156,9 +155,10 @@ $(()=> {
     const question3 =() => {
         const userInput1 = prompt('Answer the following problem below: \n 35 / 7');
         if(userInput1 === '5'){
-            user.updateScores;
+            user.updateScores();
             loc3();
             score(1);
+            restart(1);
         }else{
             alert('Wrong answer try again');
         }
@@ -166,7 +166,7 @@ $(()=> {
     const question4 =() => {
         const userInput1 = prompt('Answer the following problem below: \n 99 / 3');
         if(userInput1 === '33'){
-            user.updateScores;
+            user.updateScores();
             loc4();
             score(1);
         }else{
@@ -176,7 +176,7 @@ $(()=> {
     const question5 =() => {
         const userInput1 = prompt('Answer the following problem below: \n 20 * 6');
         if(userInput1 === '120'){
-            user.updateScores;
+            user.updateScores();
             loc5();
             score(1);
         }else{
@@ -186,9 +186,10 @@ $(()=> {
     const question6 =() => {
         const userInput1 = prompt('Answer the following problem below: \n 30 + 28');
         if(userInput1 === '58'){
-            user.updateScores;
+            user.updateScores();
             loc6();
             score(2);
+            restart(2);
         }else{
             alert('Wrong answer try again');
         }
@@ -196,7 +197,7 @@ $(()=> {
     const question7 =() => {
         const userInput1 = prompt('Answer the following problem below: \n 40 - 25');
         if(userInput1 === '15'){
-            user.updateScores;
+            user.updateScores();
             loc7();
             score(2);
         }else{
@@ -206,7 +207,7 @@ $(()=> {
     const question8 =() => {
         const userInput1 = prompt('Answer the following problem below: \n 90 * 2');
         if(userInput1 === '180'){
-            user.updateScores;
+            user.updateScores();
             loc8();
             score(2);
         }else{
@@ -216,10 +217,11 @@ $(()=> {
     const question9 =() => {
         const userInput1 = prompt('Answer the following problem below: \n 72 / 8');
         if(userInput1 === '9'){
-            user.updateScores;
+            user.updateScores();
             loc9();
             score(3);
-            alert(`${user.name} reached the top of the mountain first!${user.name} Wins!`);
+            winner();
+            
         }else{
             alert('Wrong answer try again');
         }
@@ -228,20 +230,22 @@ $(()=> {
     
     
     const opponentMove1 = () => {
-    const answerArr = ['correct','wrong'];
+    const answerArr = ['correct','wrong','correct','correct'];
     const randomAnswer = answerArr[Math.floor(Math.random()*answerArr.length)];
         console.log(randomAnswer)
         if(randomAnswer === 'correct'){
+            
             $('#player-two').css({
                 "-webkit-transform":"translate(350%,1300%)",
                 "-ms-transform":"translate(350%,1300%)",
                 "transform":"translate(350%,1300%)"
               });
+              opponent.updateScores();
         }
        
     }
     const opponentMove2 = () => {
-    const answerArr = ['correct','wrong'];
+    const answerArr = ['correct','wrong','correct','correct'];
     const randomAnswer = answerArr[Math.floor(Math.random()*answerArr.length)];
         console.log(randomAnswer)
         if(randomAnswer === 'correct'){
@@ -250,11 +254,12 @@ $(()=> {
                 "-ms-transform":"translate(400%,1250%)",
                 "transform":"translate(400%,1250%)"
               });
+              opponent.updateScores();
         }
        
     }
     const opponentMove3 = () => {
-        const answerArr = ['correct','wrong'];
+        const answerArr = ['correct','wrong','correct','correct'];
     const randomAnswer = answerArr[Math.floor(Math.random()*answerArr.length)];
         console.log(randomAnswer)
         if(randomAnswer === 'correct'){
@@ -263,11 +268,12 @@ $(()=> {
                 "-ms-transform":"translate(450%,1200%)",
                 "transform":"translate(450%,1200%)"
               });
+              opponent.updateScores();
         }
        
     }
     const opponentMove4 = () => {
-        const answerArr = ['correct','wrong'];
+        const answerArr = ['correct','wrong','correct','correct'];
     const randomAnswer = answerArr[Math.floor(Math.random()*answerArr.length)];
         console.log(randomAnswer)
         if(randomAnswer === 'correct'){
@@ -276,11 +282,12 @@ $(()=> {
                 "-ms-transform":"translate(500%,1150%)",
                 "transform":"translate(500%,1150%)"
               });
+              opponent.updateScores();
         }
        
     }
     const opponentMove5 = () => {
-        const answerArr = ['correct','wrong'];
+        const answerArr = ['correct','wrong','correct','correct'];
     const randomAnswer = answerArr[Math.floor(Math.random()*answerArr.length)];
         console.log(randomAnswer)
         if(randomAnswer === 'correct'){
@@ -289,11 +296,12 @@ $(()=> {
                 "-ms-transform":"translate(500%,1120%)",
                 "transform":"translate(500%,1120%)"
               });
+              opponent.updateScores();
         }
        
     }
     const opponentMove6 = () => {
-        const answerArr = ['correct','wrong'];
+        const answerArr = ['correct','wrong','correct','correct'];
     const randomAnswer = answerArr[Math.floor(Math.random()*answerArr.length)];
         console.log(randomAnswer)
         if(randomAnswer === 'correct'){
@@ -302,11 +310,12 @@ $(()=> {
                 "-ms-transform":"translate(500%,1100%)",
                 "transform":"translate(500%,1100%)"
               });
+              opponent.updateScores();
         }
        
     }
     const opponentMove7 = () => {
-        const answerArr = ['correct','wrong'];
+        const answerArr = ['correct','wrong','correct','correct'];
     const randomAnswer = answerArr[Math.floor(Math.random()*answerArr.length)];
         console.log(randomAnswer)
         if(randomAnswer === 'correct'){
@@ -315,11 +324,12 @@ $(()=> {
                 "-ms-transform":"translate(490%,1070%)",
                 "transform":"translate(490%,1070%)"
               });
+              opponent.updateScores();
         }
        
     }
     const opponentMove8 = () => {
-        const answerArr = ['correct','wrong'];
+        const answerArr = ['correct','wrong','correct','correct'];
     const randomAnswer = answerArr[Math.floor(Math.random()*answerArr.length)];
         console.log(randomAnswer)
         if(randomAnswer === 'correct'){
@@ -328,11 +338,12 @@ $(()=> {
                 "-ms-transform":"translate(485%,1025%)",
                 "transform":"translate(485%,1025%)"
               });
+              opponent.updateScores();
         }
        
     }
     const opponentMove9 = () => {
-        const answerArr = ['correct','wrong'];
+        const answerArr = ['correct','wrong','correct','correct'];
     const randomAnswer = answerArr[Math.floor(Math.random()*answerArr.length)];
         console.log(randomAnswer)
         if(randomAnswer === 'correct'){
@@ -341,6 +352,7 @@ $(()=> {
                 "-ms-transform":"translate(500%,900%)",
                 "transform":"translate(500%,900%)"
               });
+              opponent.updateScores();
         }
        
     }
@@ -348,6 +360,8 @@ $(()=> {
     const play1 = () => {
         question1();
         opponentMove1();
+        console.log(user);
+        console.log(opponent);
     }
     const play2 = () => {
         question2();
@@ -356,6 +370,8 @@ $(()=> {
     const play3 = () => {
         question3();
         opponentMove3();
+        console.log(user);
+        console.log(opponent);
     }
     const play4 = () => {
         question4();
@@ -368,6 +384,8 @@ $(()=> {
     const play6 = () => {
         question6();
         opponentMove6();
+        console.log(user);
+        console.log(opponent);
     }
     const play7 = () => {
         question7();
@@ -380,21 +398,25 @@ $(()=> {
     const play9 = () => {
         question9();
         opponentMove9();
+        console.log(user);
+        console.log(opponent);
     }
     /////////////////////////////
     //////START GAME FUNCTION/////
     const startGame = () => {
     alert('Answer the questions 1-9 in order')
+    
     $('#q1').on('click',play1);
     $('#q2').on('click',play2);
     $('#q3').on('click',play3);
     $('#q4').on('click',play4);
     $('#q5').on('click',play5);
     $('#q6').on('click',play6);
+    
     $('#q7').on('click',play7);
     $('#q8').on('click',play8);
     $('#q9').on('click',play9);
-       
+    
     };
     /////INTRO FUNCTION////////
     const intro = () => {
