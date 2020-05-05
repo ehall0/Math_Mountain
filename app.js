@@ -139,7 +139,8 @@ $(()=> {
             loc1();
             score(0);
         }else{
-            quesstion1();
+            alert('Wrong answer try again');
+
         }
     }
     const question2 =() => {
@@ -149,7 +150,7 @@ $(()=> {
             loc2();
             score(0);
         }else{
-            question2();
+            alert('Wrong answer try again');
         }
     }
     const question3 =() => {
@@ -159,7 +160,7 @@ $(()=> {
             loc3();
             score(1);
         }else{
-            question3();
+            alert('Wrong answer try again');
         }
     }
     const question4 =() => {
@@ -169,7 +170,7 @@ $(()=> {
             loc4();
             score(1);
         }else{
-            question4();
+            alert('Wrong answer try again');
         }
     }
     const question5 =() => {
@@ -179,7 +180,7 @@ $(()=> {
             loc5();
             score(1);
         }else{
-            question5();
+            alert('Wrong answer try again');
         }
     }
     const question6 =() => {
@@ -189,7 +190,7 @@ $(()=> {
             loc6();
             score(2);
         }else{
-            question6();
+            alert('Wrong answer try again');
         }
     }
     const question7 =() => {
@@ -199,7 +200,7 @@ $(()=> {
             loc7();
             score(2);
         }else{
-            question7();
+            alert('Wrong answer try again');
         }
     }
     const question8 =() => {
@@ -209,7 +210,7 @@ $(()=> {
             loc8();
             score(2);
         }else{
-            question8();
+            alert('Wrong answer try again');
         }
     }
     const question9 =() => {
@@ -220,23 +221,179 @@ $(()=> {
             score(3);
             alert(`${user.name} reached the top of the mountain first!${user.name} Wins!`);
         }else{
-            question9();
+            alert('Wrong answer try again');
         }
     }
-
+    //////Opponent moves/////
+    
+    
+    const opponentMove1 = () => {
+    const answerArr = ['correct','wrong'];
+    const randomAnswer = answerArr[Math.floor(Math.random()*answerArr.length)];
+        console.log(randomAnswer)
+        if(randomAnswer === 'correct'){
+            $('#player-two').css({
+                "-webkit-transform":"translate(350%,1300%)",
+                "-ms-transform":"translate(350%,1300%)",
+                "transform":"translate(350%,1300%)"
+              });
+        }
+       
+    }
+    const opponentMove2 = () => {
+    const answerArr = ['correct','wrong'];
+    const randomAnswer = answerArr[Math.floor(Math.random()*answerArr.length)];
+        console.log(randomAnswer)
+        if(randomAnswer === 'correct'){
+            $('#player-two').css({
+                "-webkit-transform":"translate(400%,1250%)",
+                "-ms-transform":"translate(400%,1250%)",
+                "transform":"translate(400%,1250%)"
+              });
+        }
+       
+    }
+    const opponentMove3 = () => {
+        const answerArr = ['correct','wrong'];
+    const randomAnswer = answerArr[Math.floor(Math.random()*answerArr.length)];
+        console.log(randomAnswer)
+        if(randomAnswer === 'correct'){
+            $('#player-two').css({
+                "-webkit-transform":"translate(450%,1200%)",
+                "-ms-transform":"translate(450%,1200%)",
+                "transform":"translate(450%,1200%)"
+              });
+        }
+       
+    }
+    const opponentMove4 = () => {
+        const answerArr = ['correct','wrong'];
+    const randomAnswer = answerArr[Math.floor(Math.random()*answerArr.length)];
+        console.log(randomAnswer)
+        if(randomAnswer === 'correct'){
+            $('#player-two').css({
+                "-webkit-transform":"translate(500%,1150%)",
+                "-ms-transform":"translate(500%,1150%)",
+                "transform":"translate(500%,1150%)"
+              });
+        }
+       
+    }
+    const opponentMove5 = () => {
+        const answerArr = ['correct','wrong'];
+    const randomAnswer = answerArr[Math.floor(Math.random()*answerArr.length)];
+        console.log(randomAnswer)
+        if(randomAnswer === 'correct'){
+            $('#player-two').css({
+                "-webkit-transform":"translate(500%,1120%)",
+                "-ms-transform":"translate(500%,1120%)",
+                "transform":"translate(500%,1120%)"
+              });
+        }
+       
+    }
+    const opponentMove6 = () => {
+        const answerArr = ['correct','wrong'];
+    const randomAnswer = answerArr[Math.floor(Math.random()*answerArr.length)];
+        console.log(randomAnswer)
+        if(randomAnswer === 'correct'){
+            $('#player-two').css({
+                "-webkit-transform":"translate(500%,1100%)",
+                "-ms-transform":"translate(500%,1100%)",
+                "transform":"translate(500%,1100%)"
+              });
+        }
+       
+    }
+    const opponentMove7 = () => {
+        const answerArr = ['correct','wrong'];
+    const randomAnswer = answerArr[Math.floor(Math.random()*answerArr.length)];
+        console.log(randomAnswer)
+        if(randomAnswer === 'correct'){
+            $('#player-two').css({
+                "-webkit-transform":"translate(490%,1070%)",
+                "-ms-transform":"translate(490%,1070%)",
+                "transform":"translate(490%,1070%)"
+              });
+        }
+       
+    }
+    const opponentMove8 = () => {
+        const answerArr = ['correct','wrong'];
+    const randomAnswer = answerArr[Math.floor(Math.random()*answerArr.length)];
+        console.log(randomAnswer)
+        if(randomAnswer === 'correct'){
+            $('#player-two').css({
+                "-webkit-transform":"translate(485%,1025%)",
+                "-ms-transform":"translate(485%,1025%)",
+                "transform":"translate(485%,1025%)"
+              });
+        }
+       
+    }
+    const opponentMove9 = () => {
+        const answerArr = ['correct','wrong'];
+    const randomAnswer = answerArr[Math.floor(Math.random()*answerArr.length)];
+        console.log(randomAnswer)
+        if(randomAnswer === 'correct'){
+            $('#player-two').css({
+                "-webkit-transform":"translate(500%,900%)",
+                "-ms-transform":"translate(500%,900%)",
+                "transform":"translate(500%,900%)"
+              });
+        }
+       
+    }
+    ///rounds////
+    const play1 = () => {
+        question1();
+        opponentMove1();
+    }
+    const play2 = () => {
+        question2();
+        opponentMove2();
+    }
+    const play3 = () => {
+        question3();
+        opponentMove3();
+    }
+    const play4 = () => {
+        question4();
+        opponentMove4();
+    }
+    const play5 = () => {
+        question5();
+        opponentMove5();
+    }
+    const play6 = () => {
+        question6();
+        opponentMove6();
+    }
+    const play7 = () => {
+        question7();
+        opponentMove7();
+    }
+    const play8 = () => {
+        question8();
+        opponentMove8();
+    }
+    const play9 = () => {
+        question9();
+        opponentMove9();
+    }
     /////////////////////////////
     //////START GAME FUNCTION/////
     const startGame = () => {
-    alert('click the question buttons in order to answer the question')
-    $('#q1').one('click',question1);
-    $('#q2').one('click',question2);
-    $('#q3').one('click',question3);
-    $('#q4').one('click',question4);
-    $('#q5').one('click',question5);
-    $('#q6').one('click',question6);
-    $('#q7').one('click',question7);
-    $('#q8').one('click',question8);
-    $('#q9').one('click',question9);
+    alert('Answer the questions 1-9 in order')
+    $('#q1').on('click',play1);
+    $('#q2').on('click',play2);
+    $('#q3').on('click',play3);
+    $('#q4').on('click',play4);
+    $('#q5').on('click',play5);
+    $('#q6').on('click',play6);
+    $('#q7').on('click',play7);
+    $('#q8').on('click',play8);
+    $('#q9').on('click',play9);
        
     };
     /////INTRO FUNCTION////////
