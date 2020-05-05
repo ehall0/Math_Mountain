@@ -60,17 +60,39 @@
 
 
 #score{
-    height: 50%;
+    height: 30%;
     width:100%;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
     color: rgba(3, 3, 3, 0.932);
     font-size: larger;
+    transform: translateY(25%);
     
     
     /* border: solid black; */
 }
-
+#questions{
+    height: 15%;
+    /* border: solid black; */
+    text-align: center;
+    transform : translate(0%,-110%) ;
+}
+#q1 , #q2 , #q3, #q4, #q5, #q6, #q7, #q8, #q9{
+    /* border: solid black; */
+    flex: 1 1 auto;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: rgb(219, 215, 215);
+    box-shadow: 0 0 20px rgb(56, 55, 55);
+    border-radius: 20px;
+    font-weight: bolder;
+    font-family: 'Courier New', Courier, monospace;
+    background-image: linear-gradient(to right, #39473e 0%, #87e2db 51%, #39473e 100%);
+}
 #column-two{
     width:70%;
     height: 800px;
@@ -91,6 +113,7 @@
     height: 25%;
     width:100%;
     text-align: center;
+    transform: translateY(-20%);
   } 
   
   .button {

@@ -139,7 +139,7 @@ $(()=> {
             loc1();
             score(0);
         }else{
-            question1();
+            quesstion1();
         }
     }
     const question2 =() => {
@@ -218,36 +218,30 @@ $(()=> {
             user.updateScores;
             loc9();
             score(3);
-            alert(`${user.name} reached the top of the mountain first!`);
+            alert(`${user.name} reached the top of the mountain first!${user.name} Wins!`);
         }else{
             question9();
         }
     }
+
     /////////////////////////////
     //////START GAME FUNCTION/////
     const startGame = () => {
-         
-        question1();
-        
-        question2();
-        
-        question3();
-        
-        question4();
-        
-        question5();
-        
-        question6();
-        
-        question7();
-        
-        question8();
-        
-        question9();
-        
-    }
+    alert('click the question buttons in order to answer the question')
+    $('#q1').one('click',question1);
+    $('#q2').one('click',question2);
+    $('#q3').one('click',question3);
+    $('#q4').one('click',question4);
+    $('#q5').one('click',question5);
+    $('#q6').one('click',question6);
+    $('#q7').one('click',question7);
+    $('#q8').one('click',question8);
+    $('#q9').one('click',question9);
+       
+    };
     /////INTRO FUNCTION////////
     const intro = () => {
+        alert('Press start to begin');
         $('.start').on('click', startGame);
     }
     intro();
