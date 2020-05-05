@@ -38,10 +38,11 @@ $(()=> {
     };
 
     /////display score function/////
-    const score = (value) => {
+    const score = () => {
         $('#number').empty();
-        const $score = $(`<div id = "current-checkpoint">${value}</div>`);
+        const $score = $(`<div id = "current-checkpoint">Current Checkpoint: ${user.checkpoint} \n\n Questions Answered: ${user.answered}</div>`);
         $('#number').append($score);
+
     }
    
     //////CHECKPOINT ANIMATION CSS/////////////
@@ -125,7 +126,7 @@ $(()=> {
         if(userInput1 === '81'){
             user.updateScores();
             loc1();
-            score(0);
+            score();
         }else{
             alert('Wrong answer try again');
 
@@ -136,7 +137,7 @@ $(()=> {
         if(userInput1 === '13'){
             user.updateScores();
             loc2();
-            score(0);
+            score();
         }else{
             alert('Wrong answer try again');
         }
@@ -147,7 +148,7 @@ $(()=> {
             user.updateScores();
             loc3();
             score(1);
-            restart(1);
+            restart();
         }else{
             alert('Wrong answer try again');
         }
@@ -157,7 +158,7 @@ $(()=> {
         if(userInput1 === '33'){
             user.updateScores();
             loc4();
-            score(1);
+            score();
         }else{
             alert('Wrong answer try again');
         }
@@ -167,7 +168,7 @@ $(()=> {
         if(userInput1 === '120'){
             user.updateScores();
             loc5();
-            score(1);
+            score();
         }else{
             alert('Wrong answer try again');
         }
@@ -177,7 +178,7 @@ $(()=> {
         if(userInput1 === '58'){
             user.updateScores();
             loc6();
-            score(2);
+            score();
             restart(2);
         }else{
             alert('Wrong answer try again');
@@ -188,7 +189,7 @@ $(()=> {
         if(userInput1 === '15'){
             user.updateScores();
             loc7();
-            score(2);
+            score();
         }else{
             alert('Wrong answer try again');
         }
@@ -198,7 +199,7 @@ $(()=> {
         if(userInput1 === '180'){
             user.updateScores();
             loc8();
-            score(2);
+            score();
         }else{
             alert('Wrong answer try again');
         }
@@ -208,7 +209,7 @@ $(()=> {
         if(userInput1 === '9'){
             user.updateScores();
             loc9();
-            score(3);
+            score();
             winner();
             
         }else{
@@ -414,5 +415,5 @@ $(()=> {
     }
     intro();
 
-    
+
 })
