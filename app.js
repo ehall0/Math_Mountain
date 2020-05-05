@@ -1,13 +1,5 @@
-// console.log($)
-// console.log('it works')
-
-
 
 $(()=> {
-
-    
-    
-    
     /////USER/////
     class User{
         constructor(name, answered, checkpoint){
@@ -24,16 +16,13 @@ $(()=> {
         };
     };
     
-    
     ////PLAYERS/////
 
     const user = new User('Player 1');
     const opponent = new User('Player 2');
 
-    // console.log(user);
-    // console.log(opponent);
-
     ////WIN FUNCTION/////
+
     const winner = () => {
         if(user.checkpoint > opponent.checkpoint){
             alert(`${user.name} Reahed the top first! You win!`);
@@ -425,5 +414,5 @@ $(()=> {
     }
     intro();
 
-
+    
 })
