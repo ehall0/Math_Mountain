@@ -33,7 +33,7 @@ $(()=> {
 
     /////RESTART FUNCTION////
     const restart = (value) => {
-        alert(`You have reached checkpoint: ${value}, you can restart by refreshing the page, or click 'OK' to continue playing.`)
+        alert(`You have reached the end of round ${value}.\nCurrent Checkpoint: ${value}\nYou can restart by refreshing the page, or click 'OK' to continue playing.`)
     
     };
 
@@ -147,8 +147,8 @@ $(()=> {
         if(userInput1 === '5'){
             user.updateScores();
             loc3();
-            score(1);
-            restart();
+            score();
+            restart(1);
         }else{
             alert('Wrong answer try again');
         }
@@ -402,7 +402,6 @@ $(()=> {
     $('#q4').on('click',play4);
     $('#q5').on('click',play5);
     $('#q6').on('click',play6);
-    
     $('#q7').on('click',play7);
     $('#q8').on('click',play8);
     $('#q9').on('click',play9);
