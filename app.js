@@ -40,7 +40,7 @@ $(()=> {
     /////display score function/////
     const score = () => {
         $('#number').empty();
-        const $score = $(`<div id = "current-checkpoint">Current Checkpoint: ${user.checkpoint} \n\n Questions Answered: ${user.answered}</div>`);
+        const $score = $(`<div id = "current-checkpoint">ANSWERED: ${user.answered}\n CHECKPOINT: ${user.checkpoint} <br> <br> Opponent Scores: <br> Answered: ${opponent.answered} Checkpoint: ${opponent.checkpoint}</div>`);
         $('#number').append($score);
 
     }
@@ -126,10 +126,10 @@ $(()=> {
         if(userInput1 === '81'){
             user.updateScores();
             loc1();
-            score();
+            // score();
         }else{
             alert('Wrong answer try again');
-
+            //question1();
         }
     }
     const question2 =() => {
@@ -137,9 +137,10 @@ $(()=> {
         if(userInput1 === '13'){
             user.updateScores();
             loc2();
-            score();
+            // score();
         }else{
             alert('Wrong answer try again');
+            // question2();
         }
     }
     const question3 =() => {
@@ -147,10 +148,11 @@ $(()=> {
         if(userInput1 === '5'){
             user.updateScores();
             loc3();
-            score();
+            // score();
             restart(1);
         }else{
             alert('Wrong answer try again');
+            // question3();
         }
     }
     const question4 =() => {
@@ -158,9 +160,10 @@ $(()=> {
         if(userInput1 === '33'){
             user.updateScores();
             loc4();
-            score();
+            // score();
         }else{
             alert('Wrong answer try again');
+            // question4();
         }
     }
     const question5 =() => {
@@ -168,9 +171,10 @@ $(()=> {
         if(userInput1 === '120'){
             user.updateScores();
             loc5();
-            score();
+            // score();
         }else{
             alert('Wrong answer try again');
+            // question5();
         }
     }
     const question6 =() => {
@@ -178,10 +182,11 @@ $(()=> {
         if(userInput1 === '58'){
             user.updateScores();
             loc6();
-            score();
+            // score();
             restart(2);
         }else{
             alert('Wrong answer try again');
+            // question6();
         }
     }
     const question7 =() => {
@@ -189,9 +194,10 @@ $(()=> {
         if(userInput1 === '15'){
             user.updateScores();
             loc7();
-            score();
+            // score();
         }else{
             alert('Wrong answer try again');
+            // question7();
         }
     }
     const question8 =() => {
@@ -199,9 +205,10 @@ $(()=> {
         if(userInput1 === '180'){
             user.updateScores();
             loc8();
-            score();
+            // score();
         }else{
             alert('Wrong answer try again');
+            // question8();
         }
     }
     const question9 =() => {
@@ -209,11 +216,12 @@ $(()=> {
         if(userInput1 === '9'){
             user.updateScores();
             loc9();
-            score();
-            winner();
+            // score();
+            // winner();
             
         }else{
             alert('Wrong answer try again');
+            // question9();
         }
     }
     //////Opponent moves/////
@@ -350,44 +358,54 @@ $(()=> {
     const play1 = () => {
         question1();
         opponentMove1();
+        score();
         console.log(user);
         console.log(opponent);
     }
     const play2 = () => {
         question2();
         opponentMove2();
+        score();
     }
     const play3 = () => {
         question3();
         opponentMove3();
+        score();
         console.log(user);
         console.log(opponent);
     }
     const play4 = () => {
         question4();
         opponentMove4();
+        score();
     }
     const play5 = () => {
         question5();
         opponentMove5();
+        score();
     }
     const play6 = () => {
         question6();
         opponentMove6();
+        score();
         console.log(user);
         console.log(opponent);
     }
     const play7 = () => {
         question7();
         opponentMove7();
+        score();
     }
     const play8 = () => {
         question8();
         opponentMove8();
+        score();
     }
     const play9 = () => {
         question9();
         opponentMove9();
+        score();
+        winner();
         console.log(user);
         console.log(opponent);
     }
