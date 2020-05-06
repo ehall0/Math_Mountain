@@ -4,7 +4,8 @@
 
 https://ehall0.github.io/Project_1_Emma_Hall/
 
-<img url(Screenshot_2020-05-06_14-58-52.png)>
+![Image description](Screenshot_2020-05-06_14-58-52.png);
+
 
 Technologies Used:
 
